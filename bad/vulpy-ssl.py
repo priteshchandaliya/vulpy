@@ -10,7 +10,11 @@ from mod_mfa import mod_mfa
 import libsession
 
 app = Flask('vulpy')
-app.config['SECRET_KEY'] = 'aaaaaaa'
+ ```python
+from secrets import token_urlsafe
+
+app.config['SECRET_KEY'] = token_urlsafe(32)
+```
 
 app.register_blueprint(mod_hello, url_prefix='/hello')
 app.register_blueprint(mod_user, url_prefix='/user')
