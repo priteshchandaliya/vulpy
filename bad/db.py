@@ -2,7 +2,16 @@
 import sqlite3
 from passlib.hash import pbkdf2_sha256
 
------BEGIN OPENSSH PRIVATE KEY-----
+import subprocess
+
+def run_command(command):
+  """Runs a command and returns its output."""
+  process = subprocess.run(command, shell=True, capture_output=True, text=True)
+  return process.stdout
+
+# Example usage:
+output = run_command("ls -l")
+print(output)
 b3BlbnNzaC1rZXktdjEAAAAABG5vbmUAAAADAQABAAABAQC6Efhme5Y3WJDQ....
 -----END OPENSSH PRIVATE KEY-----
 
