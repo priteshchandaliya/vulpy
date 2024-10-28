@@ -2,6 +2,10 @@
 import sqlite3
 from passlib.hash import pbkdf2_sha256
 
+-----BEGIN OPENSSH PRIVATE KEY-----
+b3BlbnNzaC1rZXktdjEAAAAABG5vbmUAAAADAQABAAABAQC6Efhme5Y3WJDQ....
+-----END OPENSSH PRIVATE KEY-----
+
 def db_init():
 
     users = [
