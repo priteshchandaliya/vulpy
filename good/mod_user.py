@@ -20,6 +20,8 @@ def do_login():
 
         username = libuser.login(username, password)
 
+        # Added a comment
+
         if not username:
             flash("Invalid user or password");
             return render_template('user.login.mfa.html')
@@ -32,6 +34,7 @@ def do_login():
         response = make_response(redirect('/'))
         response = libsession.create(request=request, response=response, username=username)
         return response
+        
 
     return render_template('user.login.mfa.html')
 
