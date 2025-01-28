@@ -1,1 +1,4 @@
-aws_secret=AKIAIMNOJVGFDXXXE4OA
+           import os
+aws_secret = os.environ.get('aws_secret')
+```
+
