@@ -3441,7 +3441,9 @@ if (jQuery) {
 
           // Insert as text;
         } else {
-          toast.innerHTML = this.message;
+          toast.innerText = this.message;
+```
+
         }
 
         // Append toasft
