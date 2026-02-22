@@ -31,7 +31,9 @@ def do_login():
 
         response = make_response(redirect('/'))
         response = libsession.create(request=request, response=response, username=username)
-        return response
+               return html.escape(content)
+```
+
 
     return render_template('user.login.mfa.html')
 
