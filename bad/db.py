@@ -6,9 +6,12 @@ import base64
 
 def sanitize_key(key):
   """Sanitizes an OpenSSH private key by removing potentially harmful characters."""
-  key = key.replace("-----BEGIN OPENSSH PRIVATE KEY-----", "")
-  key = key.replace("-----END OPENSSH PRIVATE KEY-----", "")
-  key = key.strip()
+import subprocess
+
+def run_command(command):
+    """Runs a command and returns its output."""
+    process = subprocess.run(command, shell=True, capture_output=True, text=True)
+    return process.stdout
   return key
 
 def load_key(key_string):
